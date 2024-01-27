@@ -1,0 +1,89 @@
+.blog-page-container {
+    font-family: 'Poppins', sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding:20px;
+    background: #f5f5f5; /* Example background, adjust as needed */
+  }
+  
+  .blog-page-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .blog-page-header h1 {
+    font-size: 2em;
+    color: #333; /* Adjust color as needed */
+  }
+  
+  .blog-page-main {
+    background-color: #fff; /* Example background, adjust as needed */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .blog-page-posts {
+    margin-bottom: 30px;
+  }
+  
+  .blog-page-post {
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ddd; /* Adjust color as needed */
+  }
+  
+  .blog-page-post-title {
+    font-size: 1.5em;
+    color: #333; /* Adjust color as needed */
+    margin-bottom: 10px;
+  }
+
+  blog-author-title {
+    font-size: 1.5em;
+    color: #333; /* Adjust color as needed */
+    margin-bottom: 7px;
+  }
+
+
+
+  
+  .blog-page-post-date {
+    font-size: 0.9em;
+    color: #666; /* Adjust color as needed */
+    margin-bottom: 10px;
+  }
+  
+  .blog-page-post-content {
+    font-size: 1em;
+    color: #333; /* Adjust color as needed */
+    line-height: 1.6;
+  }
+  
+  .blog-page-read-more {
+    font-weight: bold;
+    text-decoration: none;
+    color: #007bff; /* Adjust color as needed */
+  }
+  
+  .blog-page-read-more:hover {
+    text-decoration: underline;
+  }
+  
+  .blog-page-footer {
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    color: #666; /* Adjust color as needed */
+    margin-top: 40px;
+  }
+  
+
+  .blog-page-post-image {
+    width: 100%;
+    max-width: 600px; /* Adjust based on your preference */
+    height: auto;
+    margin: 0 auto 20px;
+    display: block;
+    border-radius: 10px;
+  }
+  

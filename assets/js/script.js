@@ -58,7 +58,8 @@ overlay.addEventListener("click", testimonialsModalFunc);
 // custom select variables
 const select = document.querySelector("[data-select]");
 const selectItems = document.querySelectorAll("[data-select-item]");
-const selectValue = document.querySelector("[data-selecct-value]");
+const selectValue = document.querySelector("[data-select-value]");
+
 const filterBtn = document.querySelectorAll("[data-filter-btn]");
 
 select.addEventListener("click", function () { elementToggleFunc(this); });
@@ -133,33 +134,6 @@ for (let i = 0; i < formInputs.length; i++) {
 
   });
 }
-
-
-// form.addEventListener('submit', function(e) {
-//   e.preventDefault();
-
-//   const data = {
-//     fullname: form.querySelector('input[name="fullname"]').value,
-//     email: form.querySelector('input[name="email"]').value,
-//     message: form.querySelector('textarea[name="message"]').value,
-//   };
-
-//   fetch('/mail', {
-//     method: 'POST',
-//     headers: {
-//       'Content-Type': 'application/json',
-//     },
-//     body: JSON.stringify(data),
-//   }).then((response) => response.json())
-//   .then((data) => {
-//     if (data.success) {
-//       form.reset();
-//       alert('Message sent!');
-//     } else {
-//       alert('Error sending message.');
-//     }
-//   });
-// });
 
 
 // page navigation variables
