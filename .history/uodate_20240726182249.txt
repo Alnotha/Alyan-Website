@@ -1,0 +1,27 @@
+
+
+
+
+Skills Update
+Right now...
+- C++
+- Python
+- SQL
+
+Updated
+Skills/Tools
+- Dash Appliciaon Develoment Framework
+- MySQL/SparkSQL
+- SKLearn Machine Learning 
+- Python
+- C++ 
+- ExpressJS Framework (Used for CSCE 314 Class)
+- Arduino IDE (C Langauge)
+- PowerBI
+- Python
+- Assembly X36
+- Cadence Hardware Design Software
+- Confluence/Jira (Move this to Resume for P&G)
+- (Learn Docker Container Stuff)
+- (Learn Swift for Apple Applicaion Development)
+- 

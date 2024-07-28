@@ -1,0 +1,14 @@
+
+
+
+
+Skills Update
+Right now...
+- C++
+- Python
+- SQL
+
+Updated
+- Dash Appliciaon Develoment Framework
+- MySQL/SparkSQL
+- SKLearn Machine Learning Framework / 
