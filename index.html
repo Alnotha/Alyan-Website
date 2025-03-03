@@ -820,81 +820,90 @@
 
           <ul class="project-list">
 
-
-            <li class="project-item  active" data-filter-item data-category="N/A">
-              <a href="#">
-
+          <!-- NeuroQuant-->
+            <li class="project-item active" data-filter-item data-category="N/A">
+              <a href="#" 
+                 class="project-link" 
+                 data-project='{"img": "./assets/images/construction.jpg", "title": "NeuroQuant Real Estate Model", "blurb": "Developing Black Box to predict real estate growth using Neural Networks and Machine Learning developed around Urban Sprawl, Intrest Rates, Housing Price, Satellite Image processing. ect.", "tech": "Python, scikit-learn, Dash, XGBoost, Google Workspace"}'>
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/construction.jpg" alt="finance" loading="lazy">
+                  <img src="./assets/images/construction.jpg" alt="Construction project image" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">NeuroQuant Real Estate Model</h3>
-
                 <p class="project-category">Personal Project</p>
-
               </a>
             </li>
+            
 
-
-            <li class="project-item  active" data-filter-item data-category="N/A">
-              <a href="#">
-
+          <!-- AI Blender-->
+            <li class="project-item active" data-filter-item data-category="N/A">
+              <a href="#" 
+                 class="project-link" 
+                 data-project='{"img": "./assets/images/construction.jpg", "title": "AI Blender (jarvis)", "blurb": "Developing a fusion tool that unifies all your AI models into one streamlined AI solution.", "tech": "Python, TensorFlow, PyTorch, scikit-learn, Keras, Docker, AWS."}'>
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/construction.jpg" alt="finance" loading="lazy">
+                  <img src="./assets/images/construction.jpg" alt="Construction project image" loading="lazy">
                 </figure>
-
-                <h3 class="project-title">AI Blender</h3>
-
+                <h3 class="project-title">AI Blender (jarvis)</h3>
                 <p class="project-category">Personal Project</p>
-
               </a>
             </li>
 
 
-            <li class="project-item  active" data-filter-item data-category="N/A">
-              <a href="http://betteranex.com">
-
+          <!-- Better Anex-->
+            <li class="project-item active" data-filter-item data-category="Personal Project">
+              <a href="#" 
+                 class="project-link" 
+                 data-project='{"img": "./assets/images/project-1.png", "title": "Better Anex", "blurb": "Frontend wrapper for the original Anex website (https://anex.us/grades/), providing data-driven insights into class GPA distribution.", "tech": "Postman, React, Vercel, JaveScript, HTML, CSS, Axios",
+                 "links": [
+                 {"url": "https://betteranex.com", "btnText": "Visit Wrapper"},
+                 {"url": "https://github.com/Alnotha/Better-Anex", "btnText": "View Github"}
+                  ]
+                }'>
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-1.png" alt="finance" loading="lazy">
+                  <img src="./assets/images/project-1.png" alt="Better Anex image" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">Better Anex</h3>
-
                 <p class="project-category">Personal Project</p>
-
               </a>
             </li>
+            
 
-
-            <li class="project-item  active" data-filter-item data-category="N/A">
-              <a href="#">
-
+             <!-- Blockchain Multiplayer Game-->
+            <li class="project-item active" data-filter-item data-category="Personal Project">
+              <a href="#" 
+                 class="project-link" 
+                 data-project='{
+                   "img": "./assets/images/project-7.png",
+                   "title": "Blockchain Multiplayer Game",
+                   "blurb": "Matching Pennies: I developed an immersive blockchain multiplayer game that leverages decentralized smart contracts and tokenized assets for a truly player-driven experience.",
+                   "tech": "Solidity, Web3.js, Remix IDE",
+                   "links": [
+                     {
+                       "url": "https://github.com/Alnotha/Blockchain-Multiplayer-Game",
+                       "btnText": "Visit Documentation & Smart Contract"
+                     }
+                   ]
+                 }'>
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/project-7.png" alt="finance" loading="lazy">
+                  <img src="./assets/images/project-7.png" alt="Blockchain Multiplayer Game Image" loading="lazy">
                 </figure>
-
                 <h3 class="project-title">Blockchain Multiplayer Game</h3>
-
                 <p class="project-category">Personal Project</p>
-
               </a>
             </li>
+            
+
 
 
             <li class="project-item  active" data-filter-item data-category="N/A">
@@ -1215,34 +1224,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
-
-
-
-
       <!--
         - #CONTACT
       -->
@@ -1286,6 +1267,43 @@
       </article>
 
     </div>
+
+    <!-- Project Details Modal -->
+    <div class="modal-container project-modal" data-project-modal>
+      <div class="overlay" data-overlay></div>
+      <section class="project-modal-content">
+        <button class="modal-close-btn" data-project-modal-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+        <!-- Navigation Arrows -->
+        <div class="modal-nav-arrows">
+          <button class="project-prev-btn" data-project-modal-prev-btn>
+            <ion-icon name="arrow-back-outline"></ion-icon>
+          </button>
+          <button class="project-next-btn" data-project-modal-next-btn>
+            <ion-icon name="arrow-forward-outline"></ion-icon>
+          </button>
+        </div>
+        <!-- Project Title Above Image -->
+        <h4 class="modal-title" data-project-modal-title>Project Title</h4>
+        <!-- Project Image -->
+        <figure class="modal-project-img">
+          <img src="" alt="Project Image" data-project-modal-img>
+        </figure>
+        <!-- Project Info -->
+        <div class="modal-project-info">
+          <p class="modal-blurb" data-project-modal-blurb></p>
+          <p class="modal-tech" data-project-modal-tech></p>
+          <!-- Container for multiple links -->
+          <div class="modal-links" data-project-modal-links></div>
+        </div>
+      </section>
+</div>
+
+
+
+
+
 
   </main>
     

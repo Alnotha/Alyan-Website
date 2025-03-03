@@ -2005,3 +2005,182 @@ textarea.form-input::-webkit-resizer { display: none; }
   color: var(--light-gray-70);
   font-weight: var(--fw-300);
 }
+
+
+
+
+
+/* Project Modal Styling */
+.project-modal-content {
+  background: var(--eerie-black-2);
+  padding: 30px;
+  margin: 30px auto;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  transform: scale(1.2);
+  opacity: 0;
+  transition: var(--transition-1);
+  z-index: 2;
+  max-width: 900px;
+  width: 1000%;
+}
+
+.modal-container.project-modal.active .project-modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.modal-project-img img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+.modal-project-info {
+  text-align: left;
+}
+
+.modal-project-info .modal-title {
+  margin-bottom: 10px;
+  color: var(--light-gray);
+  font-size: var(--fs-2);
+}
+
+.modal-blurb,
+.modal-tech {
+  font-size: var(--fs-6);
+  color: var(--light-gray);
+  margin-bottom: 10px;
+}
+
+.modal-project-link {
+  color: var(--orange-yellow-crayola);
+  font-weight: var(--fw-500);
+  text-decoration: underline;
+}
+
+.project-blurb,
+.project-tech {
+  text-indent: 20px; /* Adjust the indent as needed */
+}
+
+
+/* Project Modal Styling */
+.project-modal-content {
+  background: var(--eerie-black-2);
+  padding: 30px;
+  margin: 30px auto;
+  border: 1px solid var(--jet);
+  border-radius: 14px;
+  box-shadow: var(--shadow-5);
+  transform: scale(1.2);
+  opacity: 0;
+  transition: var(--transition-1);
+  z-index: 2;
+  max-width: 900px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-container.project-modal.active .project-modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Close Button Styling */
+.modal-close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--onyx);
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-2);
+  font-size: 18px;
+  opacity: 0.7;
+  z-index: 3;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  opacity: 1;
+}
+
+.modal-close-btn ion-icon {
+  --ionicon-stroke-width: 50px;
+}
+
+/* Navigation Arrows Container */
+.modal-nav-arrows {
+  position: absolute;
+  top: 50px; /* Just below the close button */
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 3;
+}
+
+/* Navigation Arrows Styling */
+.modal-nav-arrows button {
+  background: transparent;
+  border: none;
+  font-size: 1.8em; /* Slightly smaller icons */
+  color: var(--orange-yellow-crayola); /* Same as visit link color */
+  cursor: pointer;
+}
+
+/* Project Title Above Image */
+.modal-title {
+  text-align: center;
+  color: var(--light-gray);
+  font-size: var(--fs-1);
+  margin-bottom: 20px;
+}
+
+/* Project Image */
+.modal-project-img {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.modal-project-img img {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+}
+
+/* Project Info Styling */
+.modal-project-info {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.modal-project-info .modal-blurb,
+.modal-project-info .modal-tech {
+  margin-top: 16px;
+  font-size: var(--fs-6);
+  color: var(--light-gray);
+  margin-bottom: 10px;
+  text-indent: 20px;
+}
+
+.modal-project-link {
+  color: var(--orange-yellow-crayola);
+  font-weight: var(--fw-500);
+  text-decoration: underline;
+  text-indent: 20px;
+}
+
+
+.modal-links {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
