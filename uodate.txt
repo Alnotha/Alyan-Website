@@ -1,7 +1,4 @@
 
-
-
-
 Skills Update
 Right now...
 - C++
