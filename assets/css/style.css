@@ -2118,7 +2118,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* Navigation Arrows Container */
 .modal-nav-arrows {
   position: absolute;
-  top: 50px; /* Just below the close button */
+  bottom: 15px; 
   right: 20px;
   display: flex;
   gap: 10px;
@@ -2129,10 +2129,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 .modal-nav-arrows button {
   background: transparent;
   border: none;
-  font-size: 1.8em; /* Slightly smaller icons */
-  color: var(--orange-yellow-crayola); /* Same as visit link color */
+  font-size: 1.8em; 
+  color: var(--orange-yellow-crayola); 
   cursor: pointer;
 }
+
 
 /* Project Title Above Image */
 .modal-title {
