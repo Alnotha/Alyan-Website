@@ -1,3 +1,5 @@
+
+
 'use strict';
 
 // element toggle function
@@ -84,7 +86,7 @@ const filterFunc = function (selectedValue) {
   }
 }
 
-// add event to all filter button items for large screens
+// add event to all filter button items for lartionLinks.length > 0 && pages.lengthge screens
 let lastClickedBtn = filterBtn[0];
 
 for (let i = 0; i < filterBtn.length; i++) {
@@ -117,26 +119,25 @@ for (let i = 0; i < formInputs.length; i++) {
 }
 
 
-// page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
-// add event to all nav links
-for (let i = 0; i < navigationLinks.length; i++) {
-  navigationLinks[i].addEventListener("click", function () {
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
-        window.scrollTo(0, 0);
+navigationLinks.forEach((navLink, index) => {
+  navLink.addEventListener("click", function () {
+    pages.forEach((page, j) => {
+      if (this.innerHTML.trim().toLowerCase() === page.dataset.page) {
+        page.classList.add("active");
+        navigationLinks[j].classList.add("active");
       } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        page.classList.remove("active");
+        navigationLinks[j].classList.remove("active");
       }
-    }
+    });
+    window.scrollTo(0, 0);
   });
-}
-'use strict';
+});
+
+
 
 // ... [existing code above remains unchanged] ...
 

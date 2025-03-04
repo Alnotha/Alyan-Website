@@ -964,6 +964,7 @@ main {
   margin-bottom: 15px;
 }
 
+
 .project-img::before {
   content: "";
   position: absolute;
