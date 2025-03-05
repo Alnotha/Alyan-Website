@@ -2192,3 +2192,32 @@ textarea.form-input::-webkit-resizer { display: none; }
   flex-wrap: wrap;
 }
 
+.mapbox-fallback {
+  display: none;
+  text-align: center;
+  padding: 20px;
+  background: var(--border-gradient-onyx);
+  border-radius: 12px;
+  margin-top: 10px;
+}
+
+.mapbox-fallback p {
+  color: var(--light-gray);
+  font-size: 14px;
+}
+
+.mapbox-fallback a {
+  color: var(--orange-yellow-crayola);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mapbox-fallback a:hover {
+  text-decoration: underline;
+}
+
+/* Show fallback when iframe fails to load */
+iframe[src*="openstreetmap"] + .mapbox-fallback {
+  display: block;
+}
+
