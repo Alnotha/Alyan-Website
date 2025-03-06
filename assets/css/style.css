@@ -1410,7 +1410,17 @@ textarea.form-input::-webkit-resizer { display: none; }
   .service-content-box { text-align: left; }
 
   /* testimonials */
-
+  
+  .testimonials-job-title {
+    font-size: 0.875rem; /* Adjust font size */
+    color: rgba(255, 255, 255, 0.6); /* Light grey text */
+    font-weight: 300; /* Lighter font */
+    margin-top: -5px;
+    margin-bottom: 10px;
+    display: block;
+  }
+  
+  
   .testimonials-title { margin-bottom: 25px; }
 
   .testimonials-list {
