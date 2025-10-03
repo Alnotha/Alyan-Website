@@ -32,10 +32,10 @@ function setupTravelMap() {
 
     // Custom yellow marker icon using --orange-yellow-crayola (hsl(45, 100%, 72%))
     var yellowIcon = L.icon({
-      iconUrl: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="48" viewBox="0 0 32 48"><path d="M16 0C7.163 0 0 7.163 0 16c0 11.046 16 32 16 32s16-20.954 16-32C32 7.163 24.837 0 16 0z" fill="hsl(45,100%,60%)" stroke="%23000" stroke-width="2"/><circle cx="16" cy="16" r="6" fill="%23fff"/></svg>',
-      iconSize: [32, 48],
-      iconAnchor: [16, 48],
-      popupAnchor: [0, -48]
+      iconUrl: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="36" viewBox="0 0 32 48"><path d="M16 0C7.163 0 0 7.163 0 16c0 11.046 16 32 16 32s16-20.954 16-32C32 7.163 24.837 0 16 0z" fill="hsl(45,100%,60%)" stroke="%23000" stroke-width="2"/><circle cx="16" cy="16" r="6" fill="%23fff"/></svg>',
+      iconSize: [24, 36],
+      iconAnchor: [12, 36],
+      popupAnchor: [0, -36]
     });
 
     var places = [
