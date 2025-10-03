@@ -1,3 +1,92 @@
+// ========== TRAVEL MAP INIT ==========
+let travelMapInitialized = false;
+function initTravelMap() {
+  if (travelMapInitialized) return;
+  if (!window.L) {
+    // Load Leaflet JS dynamically if not loaded
+    const leafletScript = document.createElement('script');
+    leafletScript.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    leafletScript.onload = setupTravelMap;
+    document.body.appendChild(leafletScript);
+  } else {
+    setupTravelMap();
+  }
+}
+
+function setupTravelMap() {
+  if (document.getElementById('travel-map')) {
+    var map = L.map('travel-map', {
+      center: [20, 0],
+      zoom: 2,
+      worldCopyJump: true,
+      dragging: true,
+      scrollWheelZoom: true,
+      doubleClickZoom: true,
+      boxZoom: true,
+      keyboard: true
+    });
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+      maxZoom: 18,
+      attribution: '© OpenStreetMap contributors, © CartoDB'
+    }).addTo(map);
+
+    // Custom yellow marker icon using --orange-yellow-crayola (hsl(45, 100%, 72%))
+    var yellowIcon = L.icon({
+      iconUrl: 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="48" viewBox="0 0 32 48"><path d="M16 0C7.163 0 0 7.163 0 16c0 11.046 16 32 16 32s16-20.954 16-32C32 7.163 24.837 0 16 0z" fill="hsl(45,100%,60%)" stroke="%23000" stroke-width="2"/><circle cx="16" cy="16" r="6" fill="%23fff"/></svg>',
+      iconSize: [32, 48],
+      iconAnchor: [16, 48],
+      popupAnchor: [0, -48]
+    });
+
+    var places = [
+      { name: 'UAE', coords: [25.2048, 55.2708] },
+      { name: 'Qatar', coords: [25.276987, 51.520008] },
+      { name: 'Karachi, Pakistan', coords: [24.8607, 67.0011] },
+      { name: 'Islamabad, Pakistan', coords: [33.6844, 73.0479] },
+      { name: 'Hunza, Pakistan', coords: [36.3167, 74.6500] },
+      { name: 'Indonesia', coords: [-0.7893, 113.9213] },
+      { name: 'Singapore', coords: [1.3521, 103.8198] },
+      { name: 'Mexico', coords: [23.6345, -102.5528] },
+      { name: 'Dominican Republic', coords: [18.7357, -70.1627] },
+      { name: 'Costa Rica', coords: [9.7489, -83.7534] },
+      { name: 'London', coords: [51.5074, -0.1278] },
+      { name: 'Barcelona', coords: [41.3851, 2.1734] },
+      { name: 'Portugal', coords: [39.3999, -8.2245] },
+      { name: 'Venice, Italy', coords: [45.4408, 12.3155] },
+      { name: 'Italy', coords: [41.8719, 12.5674] },
+      { name: 'France', coords: [48.8566, 2.3522] },
+      { name: 'Congo', coords: [-0.228, 15.8277] },
+      { name: 'Antarctica', coords: [-82.8628, 135.0000] },
+      { name: 'Jamaica', coords: [18.1096, -77.2975] },
+      { name: 'Texas', coords: [31.9686, -99.9018] },
+      { name: 'New York', coords: [40.7128, -74.0060] },
+      { name: 'Toronto', coords: [43.651070, -79.347015] },
+      { name: 'Vancouver', coords: [49.2827, -123.1207] },
+      { name: 'Edmonton', coords: [53.5461, -113.4938] },
+      { name: 'Calgary', coords: [51.0447, -114.0719] },
+      { name: 'Minneapolis', coords: [44.9778, -93.2650] },
+      { name: 'Cincinnati', coords: [39.1031, -84.5120] },
+      { name: 'Saint Louis', coords: [38.6270, -90.1994] },
+      { name: 'Cape Girardeau, Missouri', coords: [37.3059, -89.5181] },
+      { name: 'Washington DC', coords: [38.9072, -77.0369] },
+      { name: 'Nashville', coords: [36.1627, -86.7816] },
+      { name: 'Montreal', coords: [45.5017, -73.5673] },
+      { name: 'North Carolina', coords: [35.7596, -79.0193] },
+      { name: 'Tampa, Florida', coords: [27.9506, -82.4572] },
+      { name: 'Louisiana', coords: [30.9843, -91.9623] },
+      { name: 'Las Vegas', coords: [36.1699, -115.1398] },
+      { name: 'Denver, Colorado', coords: [39.7392, -104.9903] },
+      { name: 'Juneau, Alaska', coords: [58.3019, -134.4197] },
+      { name: 'Bahamas', coords: [25.0343, -77.3963] },
+      { name: 'Chicago', coords: [41.8781, -87.6298] }
+    ];
+    places.forEach(function(place) {
+      L.marker(place.coords, { icon: yellowIcon }).addTo(map)
+        .bindPopup('<b>' + place.name + '</b>');
+    });
+    travelMapInitialized = true;
+  }
+}
 "use strict";
 
 /**
@@ -214,25 +303,31 @@ const navigationLinks = document.querySelectorAll("[data-nav-link]");
 const pages = document.querySelectorAll("[data-page]");
 
 if (navigationLinks && navigationLinks.length > 0 && pages && pages.length > 0) {
-  navigationLinks.forEach((navLink, index) => {
+  navigationLinks.forEach((navLink) => {
     navLink.addEventListener("click", function () {
       const currentPage = this.innerHTML.trim().toLowerCase();
 
-      pages.forEach((page, j) => {
+      // Show the correct page
+      pages.forEach((page) => {
         if (page.dataset.page === currentPage) {
           page.classList.add("active");
-          // Also highlight the corresponding nav
-          if (navigationLinks[j]) {
-            navigationLinks[j].classList.add("active");
+          if (currentPage === "travel") {
+            initTravelMap();
           }
         } else {
           page.classList.remove("active");
-          if (navigationLinks[j]) {
-            navigationLinks[j].classList.remove("active");
-          }
         }
       });
-      // Scroll to top whenever a new page is activated
+
+      // Highlight only the clicked nav link
+      navigationLinks.forEach((link) => {
+        if (link === this) {
+          link.classList.add("active");
+        } else {
+          link.classList.remove("active");
+        }
+      });
+
       window.scrollTo(0, 0);
     });
   });

@@ -204,6 +204,9 @@
           <!-- <li class="navbar-item">
             <button class="navbar-link" data-nav-link>Contact</button>
           </li> -->
+            <li class="navbar-item">
+              <button class="navbar-link" data-nav-link>Travel</button>
+            </li>
 
         </ul>
 
@@ -582,6 +585,34 @@
 
       </article>
 
+        <!--
+          - #TRAVEL
+        -->
+
+
+        <article class="travel" data-page="travel">
+          <header>
+            <h2 class="h2 article-title">Travel</h2>
+          </header>
+          <section class="travel-section">
+            <p class="travel-description">Below is a map of all the places I've traveled to!</p>
+            <div class="travel-map-container">
+              <div id="travel-map"></div>
+            </div>
+            <div class="travel-gallery">
+              <!-- Add your travel photos here. Example: -->
+              <!--
+              <div class="travel-gallery-item">
+                <img src="/images/travel/photo1.jpg" alt="Travel Photo">
+                <div class="travel-gallery-caption">Venice, Italy</div>
+              </div>
+              -->
+            </div>
+          </section>
+          <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+          <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        </article>
+
   <!-- #RESUME -->
   <article class="resume" data-page="resume">
     <header>
@@ -636,7 +667,7 @@
           <p class="h4 timeline-item-title"><strong>Location:</strong> Dallas, Texas</p>
           <span>June 2025 — Present</span>
           <p class="timeline-text">
-            Platform as a Service
+            PaaS
           </p>
           <div style="margin-top: 0.75em;">
             <!-- <span style="font-weight: bold; color: #ffffff;">Technologies Used:</span>
@@ -900,28 +931,6 @@
           </div>
 
         <ul class="project-list">
-
-            <!-- AI Blender (Jarvis) -->
-            <li class="project-item active" data-filter-item data-category="personal projects">
-              <a href="#"
-                class="project-link"
-                data-project='{
-                  "img": "./assets/images/project-11.png",
-                  "title": "AI Blender - jarvis (In Dev)",
-                  "blurb": "(In Development Phase) Developing a fusion tool that unifies all your AI models into one streamlined, high-performance solution.",
-                  "tech": "Python, TensorFlow, PyTorch, scikit-learn, Keras, Docker, AWS",
-                  "links": []
-                }'>
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-11.png" alt="AI Blender image" loading="lazy">
-                </figure>
-                <h3 class="project-title">AI Blender - jarvis (In Dev)</h3>
-                <p class="project-category">Personal Project</p>
-              </a>
-            </li>
 
 
             <!-- CLEO - Smart Course Scheduler -->
